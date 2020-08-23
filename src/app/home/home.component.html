@@ -1,9 +1,17 @@
 <div class="container">
-  <div class="config-input">
-
+  <div nz-row>
+    <div nz-col nzSpan="6">用户名:</div>
+    <div nz-col nzSpan="18"></div>
+    <input nz-input placeholder="Basic usage" [(ngModel)]="userName" />
   </div>
+  <div nz-row>
+    <div nz-col nzSpan="6">输出目录:</div>
+    <div nz-col nzSpan="18"></div>
+    <input nz-input placeholder="Basic usage" [(ngModel)]="targetPath" />
+  </div>
+ <div>
+   <button  nz-button  nzType="primary" (click)="onClick()">获取</button>
 
+</div>
 
-
-  <button (click)="test()">toggle</button>
 </div>

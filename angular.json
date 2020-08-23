@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-electron": {
+    "spotlight": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -20,6 +20,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -84,24 +85,24 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-electron:build"
+            "browserTarget": "spotlight:build"
           },
           "configurations": {
             "dev": {
-              "browserTarget": "angular-electron:build:dev"
+              "browserTarget": "spotlight:build:dev"
             },
             "web": {
-              "browserTarget": "angular-electron:build:web"
+              "browserTarget": "spotlight:build:web"
             },
             "production": {
-              "browserTarget": "angular-electron:build:production"
+              "browserTarget": "spotlight:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-electron:build"
+            "browserTarget": "spotlight:build"
           }
         },
         "test": {
@@ -113,6 +114,7 @@
             "karmaConfig": "src/karma.conf.js",
             "scripts": [],
             "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.scss"
             ],
             "assets": [
@@ -138,7 +140,7 @@
         }
       }
     },
-    "angular-electron-e2e": {
+    "spotlight-e2e": {
       "root": "e2e",
       "projectType": "application",
       "architect": {
@@ -157,7 +159,7 @@
       }
     }
   },
-  "defaultProject": "angular-electron",
+  "defaultProject": "spotlight",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
