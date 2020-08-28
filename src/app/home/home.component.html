@@ -1,17 +1,23 @@
 <div class="container">
-  <div nz-row>
-    <div nz-col nzSpan="6">用户名:</div>
-    <div nz-col nzSpan="18"></div>
-    <input nz-input placeholder="Basic usage" [(ngModel)]="userName" />
+  <div class="content">
+    <h2>配置：</h2>
+    <div nz-row  [nzGutter]="16">
+      <div nz-col nzSpan="12">用户名: <input nz-input placeholder="请输入计算机用户名" [(ngModel)]="userName" /></div>
+      <div nz-col nzSpan="12">
+        输出目录:<input nz-input placeholder="请输入" [(ngModel)]="targetPath" />
+      </div>
+    </div>
+    <br>
+    <div nz-row>
+      <div nz-col nzSpan="12">
+         选择开始日期： <nz-date-picker [(ngModel)]="start" (ngModelChange)="onChange($event)"></nz-date-picker>
+      </div>
+    </div>
+    <br>
+    <div nz-row>
+      <button nz-col nzSpan="18" nz-button nzType="primary" (click)="onClick()">获取</button>
+    </div>
   </div>
-  <div nz-row>
-    <div nz-col nzSpan="6">输出目录:</div>
-    <div nz-col nzSpan="18"></div>
-    <input nz-input placeholder="Basic usage" [(ngModel)]="targetPath" />
-  </div>
- <div>
-   <button  nz-button  nzType="primary" (click)="onClick()">获取</button>
 
-</div>
 
 </div>

@@ -1,13 +1,17 @@
 {
   "name": "spotlight",
   "version": "0.0.1",
-  "description": "Angular 10 with Electron (Typescript + SASS + Hot Reload)",
+  "description": "win10 开机壁纸提取",
   "homepage": "https://github.com/wflixu/spotlight",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "wflixu",
+    "email": "wflixu@yeah.net"
   },
   "keywords": [
+    "win10",
+    "开机壁纸",
+    "聚焦",
+    "spotlight",
     "angular",
     "angular 10",
     "electron",

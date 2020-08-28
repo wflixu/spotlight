@@ -19,7 +19,10 @@ import { HomeModule } from './home/home.module';
 import { DetailModule } from './detail/detail.module';
 
 import { AppComponent } from './app.component';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
 
+registerLocaleData(zh);
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {

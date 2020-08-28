@@ -10,6 +10,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
     NzButtonModule,
     NzMessageModule,
     NzGridModule,
+    NzDatePickerModule,
     HomeRoutingModule],
   declarations: [HomeComponent]
 })

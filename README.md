@@ -1,32 +1,12 @@
-[![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
-
-![Maintained][maintained-badge]
-[![Travis Build Status][build-badge]][build]
-[![Make a pull request][prs-badge]][prs]
-[![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)
 
 
-# Introduction
 
-Bootstrap and package your project with Angular 10 and Electron 8 (Typescript + SASS + Hot Reload) for creating Desktop applications.
+# 简介
 
-Currently runs with:
+只需要输入计算机名，就能提取出win10 开机聚焦壁纸到指定目录
 
-- Angular v10.0.9
-- Electron v9.2.0
-- Electron Builder v22.8.0
 
-With this sample, you can :
-
-- Run your app in a local development environment with Electron & Hot reload
-- Run your app in a production environment
-- Package your app into an executable file for Linux, Windows & Mac
-
-/!\ Hot reload only pertains to the renderer process. The main electron process is not able to be hot reloaded, only restarted.
-
-/!\ Angular 10.x CLI needs Node 10.13 or later to work correctly.
-
-## Getting Started
+## 准备
 
 Clone this repository locally :
 
@@ -40,78 +20,22 @@ Install dependencies with npm :
 npm install
 ```
 
-There is an issue with `yarn` and `node_modules` when the application is built by the packager. Please use `npm` as dependencies manager.
-
-
-If you want to generate Angular components with Angular-cli , you **MUST** install `@angular/cli` in npm global context.
-Please follow [Angular-cli documentation](https://github.com/angular/angular-cli) if you had installed a previous version of `angular-cli`.
 
 ``` bash
 npm install -g @angular/cli
 ```
 
-## To build for development
+## 开发预览
 
-- **in a terminal window** -> npm start
+``` bash
+npm run start
+```
 
-Voila! You can use your Angular + Electron app in a local development environment with hot reload !
 
-The application code is managed by `main.ts`. In this sample, the app runs with a simple Angular App (http://localhost:4200) and an Electron window.
-The Angular component contains an example of Electron and NodeJS native lib import.
-You can disable "Developer Tools" by commenting `win.webContents.openDevTools();` in `main.ts`.
+## 生成可执行文件
+执行以下命令后，可执行文件在release 目录下
 
-## Included Commands
+``` bash
+npm run electron:build
+```
 
-|Command|Description|
-|--|--|
-|`npm run ng:serve`| Execute the app in the browser |
-|`npm run build`| Build the app. Your built files are in the /dist folder. |
-|`npm run build:prod`| Build the app with Angular aot. Your built files are in the /dist folder. |
-|`npm run electron:local`| Builds your application and start electron
-|`npm run electron:build`| Builds your application and creates an app consumable based on your operating system |
-
-**Your application is optimised. Only /dist folder and node dependencies are included in the executable.**
-
-## You want to use a specific lib (like rxjs) in electron main thread ?
-
-YES! You can do it! Just by importing your library in npm dependencies section (not **devDependencies**) with `npm install --save`. It will be loaded by electron during build phase and added to your final package. Then use your library by importing it in `main.ts` file. Quite simple, isn't it ?
-
-## Browser mode
-
-Maybe you want to execute the application in the browser with hot reload ? Just run `npm run ng:serve:web`.
-**Note that you can't use Electron or NodeJS native libraries in this case.** Please check `providers/electron.service.ts` to watch how conditional import of electron/Native libraries is done.
-
-## E2E Testing
-
-E2E Test scripts can be found in `e2e` folder.
-
-|Command|Description|
-|--|--|
-|`npm run e2e`| Execute end to end tests |
-
-Note: To make it work behind a proxy, you can add this proxy exception in your terminal  
-`export {no_proxy,NO_PROXY}="127.0.0.1,localhost"`
-
-## Branch & Packages version
-
-- Angular 4 & Electron 1 : Branch [angular4](https://github.com/wflixu/spotlight/tree/angular4)
-- Angular 5 & Electron 1 : Branch [angular5](https://github.com/wflixu/spotlight/tree/angular5)
-- Angular 6 & Electron 3 : Branch [angular6](https://github.com/wflixu/spotlight/tree/angular6)
-- Angular 7 & Electron 3 : Branch [angular7](https://github.com/wflixu/spotlight/tree/angular7)
-- Angular 8 & Electron 7 : Branch [angular8](https://github.com/wflixu/spotlight/tree/angular8)
-- Angular 9 & Electron 7 : Branch [angular9](https://github.com/wflixu/spotlight/tree/angular9)
-- Angular 10 & Electron 9 : (master)
-
-[build-badge]: https://travis-ci.org/wflixu/spotlight.svg?branch=master&style=style=flat-square
-[build]: https://travis-ci.org/wflixu/spotlight
-[license-badge]: https://img.shields.io/badge/license-Apache2-blue.svg?style=style=flat-square
-[license]: https://github.com/wflixu/spotlight/blob/master/LICENSE.md
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-[prs]: http://makeapullrequest.com
-[github-watch-badge]: https://img.shields.io/github/watchers/wflixu/spotlight.svg?style=social
-[github-watch]: https://github.com/wflixu/spotlight/watchers
-[github-star-badge]: https://img.shields.io/github/stars/wflixu/spotlight.svg?style=social
-[github-star]: https://github.com/wflixu/spotlight/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20angular-electron!%20https://github.com/wflixu/spotlight%20%F0%9F%91%8D
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/wflixu/spotlight.svg?style=social
-[maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
